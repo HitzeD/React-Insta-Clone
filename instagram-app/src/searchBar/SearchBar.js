@@ -1,11 +1,12 @@
 import React from 'react';
 import './searchBar.css';
+import logo from './insta.png';
 
 const SearchBar = props => {
     return (
         <div className="navBar">
             <div className="picLogo">
-                <img src="glyph-logo_May2016.png" alt="insta logo"/>
+                <img src={logo} alt="insta logo"/>
                 <p className="title-logo"> |  Instagram</p>
             </div>
             <input types="text" placeholder="Search" />
