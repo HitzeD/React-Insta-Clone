@@ -39,13 +39,13 @@ PostContainer.propTypes = {
             comments: PropTypes.arrayOf({
                 username: PropTypes.string,
                 text: PropTypes.string,
-            })
-        }) 
+            }),
+        })
     ).isRequired
 }
   
-  PostContainer.defaultProps = {
-    post: []
-  };
+PostContainer.defaultProps = {
+    post: [],
+};
 
 export default PostContainer;
