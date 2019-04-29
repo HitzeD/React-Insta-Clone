@@ -5,7 +5,7 @@ const SearchBar = props => {
     return (
         <div className="navBar">
             <div className="picLogo">
-                <img src="#" alt="insta logo" />
+                <img src="glyph-logo_May2016.png" />
                 <p className="title-logo"> |  Instagram</p>
             </div>
             <input types="text" placeholder="Search" />
@@ -19,3 +19,6 @@ const SearchBar = props => {
 }
 
 export default SearchBar;
+
+
+{/* Comments alt="insta logo" */}
