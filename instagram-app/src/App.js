@@ -1,11 +1,11 @@
 import React from 'react';
-import dummyData from 'dummy-data.js';
 import './App.css';
+import SearchBar from './searchBar/SearchBar';
 
 function App() {
   return (
     <div className="App">
-      
+        <SearchBar />
     </div>
   );
 }

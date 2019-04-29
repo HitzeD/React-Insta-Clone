@@ -1,0 +1,16 @@
+.navBar{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.picLogo{
+    display: flex;
+    align-items: baseline;
+}
+
+.clickables{
+    display: flex;
+    justify-content: space-evenly;
+}
