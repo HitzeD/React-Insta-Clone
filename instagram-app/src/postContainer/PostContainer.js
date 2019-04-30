@@ -7,7 +7,7 @@ const PostContainer = props => {
     return(
         <>
             {props.info.map((post, index) => (
-                <div key={index}>
+                <div className="post-wrap" key={index}>
                     <div className="user-img">
                         <img src={post.thumbnailUrl} alt="user"/>
                         <p>{post.username}</p>
