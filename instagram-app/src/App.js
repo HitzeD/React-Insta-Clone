@@ -26,10 +26,14 @@ class App extends React.Component {
     
   }
 
+  searching = (e) => {
+    console.log(e.target.value)
+  }
+
   render(){
     return (
       <div className="App">
-          <SearchBar />
+          <SearchBar search={this.searching} />
           <PostContainer info={this.state.data} like={this.likeMe}/>
       </div>
     );
