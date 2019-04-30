@@ -6,30 +6,49 @@ class CommentSection extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            comment: [],
+            comments: [],
+            comment: '',
         }
     }
 
     componentDidMount() {
         this.setState({
-            comment: this.props.comment,
+            comments: this.props.comment,
+            comment: '',
         })
-        console.log(this.state.comment);
     }
 
-    addNewComment = e => {
-        
+    changeHandler = e => {
+        this.setState({
+            comment: {
+                ...this.state.comment,
+                text: e.target.value,
+            }
+        })
+    }
+
+    addNewComment = (e, index) => {
+        e.preventDefault();
+        const newComment = {username: 'skippyLong', text: this.state.comment.text}
+        this.setState({
+            comments: [...this.state.comments, newComment],
+            comment: {
+                text: '',
+            }
+        })
     }
 
     render(){
         return (
             <>
-                {this.state.comment.map((words, index) => (
+                {this.state.comments.map((words, index) => (
                     <div className="comments" key={index}>
                         <p><strong>{words.username}</strong> {words.text}</p>
                     </div>
                 ))}
-                <input types="text" placeholder="Comment Here..." />
+                <form onSubmit={this.addNewComment}>
+                    <input types="text" placeholder="Comment Here..." onChange={this.changeHandler} />
+                </form>
             </>
         );
     }
