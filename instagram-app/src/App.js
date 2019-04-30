@@ -21,11 +21,16 @@ class App extends React.Component {
     })
   }
 
+  likeMe = (e) => {
+    console.log('it works');
+    
+  }
+
   render(){
     return (
       <div className="App">
           <SearchBar />
-          <PostContainer info={this.state.data} />
+          <PostContainer info={this.state.data} like={this.likeMe}/>
       </div>
     );
   }

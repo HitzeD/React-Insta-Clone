@@ -27,7 +27,7 @@ class CommentSection extends React.Component {
         })
     }
 
-    addNewComment = (e, index) => {
+    addNewComment = e => {
         e.preventDefault();
         const newComment = {username: 'skippyLong', text: this.state.comment.text}
         this.setState({
@@ -47,7 +47,7 @@ class CommentSection extends React.Component {
                     </div>
                 ))}
                 <form onSubmit={this.addNewComment}>
-                    <input types="text" placeholder="Comment Here..." onChange={this.changeHandler} />
+                    <input value={this.state.comment.text} type="text" placeholder="Comment Here..." onChange={this.changeHandler} />
                 </form>
             </>
         );
