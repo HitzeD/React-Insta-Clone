@@ -11,9 +11,9 @@ const SearchBar = props => {
             </div>
             <input types="text" placeholder="Search" />
             <div className="clickables">
-                <a href="#" ><img src="#" alt="compass"/></a>
-                <a href="#" ><img src="#" alt="heart"/></a>
-                <a href="#" ><img src="#" alt="user"/></a>
+                <i className="fas fa-compass"></i>
+                <i className="fas fa-heart"></i>
+                <i className="fas fa-user"></i>
             </div>
         </div>
     );

@@ -14,8 +14,8 @@ const PostContainer = props => {
                     </div>
                     <img className="user-post" src={post.imageUrl} alt="user post"/>
                     <div className="post-clicks">
-                        <img src="#" alt="heart"/>
-                        <img src="#" alt="comment"/>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-comment"></i>
                     </div>
                     <div>
                         <p className="bottom-sec">{post.likes} likes</p>
