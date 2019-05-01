@@ -3,7 +3,6 @@ import './searchBar.css';
 import logo from './insta.png';
 
 const SearchBar = props => {
-    console.log(props.search)
     return (
         <div className="navBar">
             <div className="picLogo">
@@ -23,6 +22,3 @@ const SearchBar = props => {
 }
 
 export default SearchBar;
-
-
-{/* Comments */}

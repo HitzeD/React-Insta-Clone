@@ -6,7 +6,7 @@ import './postContainer.css'
 const PostContainer = props => {
     return(
         <>
-            {props.info.map((post, index, ) => (
+            {props.info.map((post, index) => (
                 <div className="post-wrap" key={index}>
                     <div className="user-img">
                         <img src={post.thumbnailUrl} alt="user"/>
@@ -14,7 +14,7 @@ const PostContainer = props => {
                     </div>
                     <img className="user-post" src={post.imageUrl} alt="user post"/>
                     <div className="post-clicks">
-                        <i onClick={props.like} className="fas fa-heart"></i>
+                        <i onClick={() => props.like(post.username)} className="fas fa-heart"></i>
                         <i className="fas fa-comment"></i>
                     </div>
                     <div>

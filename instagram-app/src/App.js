@@ -21,20 +21,25 @@ class App extends React.Component {
     })
   }
 
-  likeMe = (e) => {
-    console.log('it works');
+  likeMe = arg => {
+    console.log(arg)
+    this.setState({
+      data: this.state.data.map(post => post.username === arg ? {...post, likes: post.likes + 1} : post)
+    })
     
   }
 
   searching = (e) => {
-    console.log(e.target.value)
+    this.setState({
+      data: this.state.data.filter()
+    })
   }
 
   render(){
     return (
       <div className="App">
           <SearchBar search={this.searching} />
-          <PostContainer info={this.state.data} like={this.likeMe}/>
+          <PostContainer info={this.state.data} like={this.likeMe} />
       </div>
     );
   }
