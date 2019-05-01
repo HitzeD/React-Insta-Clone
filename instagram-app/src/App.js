@@ -12,6 +12,7 @@ class App extends React.Component {
     super();
     this.state = {
       data: [],
+      filteredPosts: [],
     }
   }
 
@@ -22,23 +23,28 @@ class App extends React.Component {
   }
 
   likeMe = arg => {
-    console.log(arg)
     this.setState({
       data: this.state.data.map(post => post.username === arg ? {...post, likes: post.likes + 1} : post)
     })
-    
   }
 
   searching = (e) => {
-    this.setState({
-      data: this.state.data.filter()
+    console.log(e.target.value);
+    e.preventDefault();
+    const search = this.state.data.filter(post => {
+      if(post.username.includes(e.target.value)){
+        return post
+      }
+      this.setState({
+        filteredPosts: search,
+      })
     })
   }
 
   render(){
     return (
       <div className="App">
-          <SearchBar search={this.searching} />
+          <SearchBar search={this.searching}/>
           <PostContainer info={this.state.data} like={this.likeMe} />
       </div>
     );
