@@ -3,7 +3,6 @@ import './searchBar.css';
 import logo from './insta.png';
 
 const SearchBar = props => {
-    console.log(props)
     return (
         <div className="navBar">
             <div className="picLogo">
@@ -11,7 +10,7 @@ const SearchBar = props => {
                 <p className="title-logo"> |  Instagram</p>
             </div>
             <form onSubmit={props.search}>
-                <input onKeyPress={props.searching} types="text" placeholder="Search" />
+                <input onChange={props.search} value={props.write} types="text" placeholder="Search" />
             </form>
             <div className="clickables">
                 <i className="fas fa-compass"></i>

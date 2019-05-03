@@ -4,26 +4,25 @@ import PropTypes from 'prop-types';
 import './postContainer.css'
 
 const PostContainer = props => {
+    console.log(props.likes)
     return(
         <>
-            {props.info.map((post, index) => (
-                <div className="post-wrap" key={index}>
-                    <div className="user-img">
-                        <img src={post.thumbnailUrl} alt="user"/>
-                        <p>{post.username}</p>
-                    </div>
-                    <img className="user-post" src={post.imageUrl} alt="user post"/>
-                    <div className="post-clicks">
-                        <i onClick={() => props.like(post.username)} className="fas fa-heart"></i>
-                        <i className="fas fa-comment"></i>
-                    </div>
-                    <div>
-                        <p className="bottom-sec">{post.likes} likes</p>
-                        <CommentSection comment={post.comments} />
-                        <p className="bottom">{post.timestamp}</p>
-                    </div>
+            <div className="post-wrap">
+                <div className="user-img">
+                    <img src={props.post.thumbnailUrl} alt="user"/>
+                    <p>{props.post.username}</p>
                 </div>
-            ))}
+                <img className="user-post" src={props.post.imageUrl} alt="user post"/>
+                <div className="post-clicks">
+                    <i onClick={props.likes} className="fas fa-heart"></i>
+                       <i className="fas fa-comment"></i>
+                </div>
+                <div>
+                    <p className="bottom-sec">{props.post.likes} likes</p>
+                    <CommentSection comment={props.post.comments} />
+                    <p className="bottom">{props.post.timestamp}</p>
+                </div>
+            </div>
         </>
     );
 }
