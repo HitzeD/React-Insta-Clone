@@ -1,0 +1,38 @@
+.user-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 250px;
+}
+
+.user-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.post-clicks {
+    position: relative;
+    right: 250px;
+    margin: 10px;
+}
+
+.post-clicks i {
+    margin: 10px;
+    position: relative;
+    right: 35px;
+}
+
+.bottom-sec {
+    position: relative;
+    right: 280px;
+    margin: 10px;
+}
+
+.bottom {
+    position: relative;
+    right: 220px;
+    margin: 10px;
+}

@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import PostPage from './postContainer/PostPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+class App extends React.Component {
+
+  // searching = (e) => {
+  //   console.log(e.target.value);
+  //   e.preventDefault();
+  //   this.state.data.filter(post => {
+  //     if(post.username.includes(e.target.value)){
+  //       this.setState({
+  //         write: e.target.value,
+  //       })
+  //     }
+  //   })
+  // }
+
+  render(){
+    return (
+      <div className="App">
+          <PostPage />
+      </div>
+    );
+  }
 }
 
 export default App;
